@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrusel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            position: relative;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .carrucel{
+            overflow: hidden;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+        }
+        .container>div{
+            height: 300px;
+            width: 300px;
+            
+        }
+        .img1{
+            background-color: lightblue;
+        }
+        .img2{
+            background-color: blue;
+        }
+        .img3{
+            background-color: green;
+        }
+        .img4{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="carrucel">
+        <div class="container">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+            <div class="img4"></div>
+        </div>
+    </div>
+    <div class="botones">
+        <button type="button" class="anterior">anterior</button>
+        <button type="button" class="siguiente">siguiente</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

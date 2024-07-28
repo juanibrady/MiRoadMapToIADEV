@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>formulario</title>
+</head>
+<body>
+    <section>
+        <h1>Productos de supermercado</h1>
+    </section>
+    <aside>
+        <h2>Filtrar</h2>
+        <form action="">
+            <label for="nombre">Nombre del producto</label>
+            <input type="text" name="nombre_producto" id="nombre">
+            
+            <label for="min">Precio minimo</label>
+            <input type="number" name="precio_minimo" id="min">
+
+            <label for="max">Precio maximo</label>
+            <input type="number" name="precio_maximo" id="max">
+
+            <label for="rubro">Seleccione un rubro:</label>
+            <select id="rubro" name="rubro">
+                <option value="Cualquiera">Cualquiera</option>
+                <option value="Postres">Postres</option>
+                <option value="Lácteos">Lácteos</option>
+                <option value="Huevos">Huevos</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Dulces">Dulces</option>
+                <option value="Desayuno">Desayuno</option>
+                <option value="Conservas">Conservas</option>
+                <option value="Legumbres">Legumbres</option>
+                <option value="Frutos Secos">Frutos Secos</option>
+                <option value="Cereales">Cereales</option>
+                <option value="Pastas">Pastas</option>
+                <option value="Salsas">Salsas</option>
+                <option value="Condimentos">Condimentos</option>
+                <option value="Carnes">Carnes</option>
+                <option value="Pescados">Pescados</option>
+                <option value="Verduras">Verduras</option>
+                <option value="Frutas">Frutas</option>
+            </select>
+
+            <label for="orden">Indique el orden por precio</label>
+            <select name="orden_producto" id="orden">
+                <option value="ASC">Ascendente</option>
+                <option value="DESC">Descendente</option>
+            </select>
+            
+
+            <input type="submit">
+        </form>
+        <script src="./javascript/index.js"></script>
+    </aside>
+</body>
+</html>

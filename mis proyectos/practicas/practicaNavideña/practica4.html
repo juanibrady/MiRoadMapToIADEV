@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function decode(message) {
+            const hasPar=array=>{
+                for(let caracter of array){
+                    if (caracter==="(" || caracter===")"){
+                        return true
+                    }
+                    return false
+                }
+            }
+            const separarParentesis=(array)=>{
+                if(array.some(hasPar)){
+                    //----encuentra el indice de los parentesis----
+                    const p1=array.indexOf("(")
+                    const p2=array.indexOf(")")
+                    //----rebana y elimina los parentesis
+                    array.splice(p1,1,"")
+                    array.splice(p2,1,"")
+                    let resultado=array.slice(p1+1,p2)
+                    resultado.reverse()
+                    array.splice(p1,0,resultado).join("")
+                    console.log(array)
+                }
+
+            }
+
+
+            const array=message.split("")
+            separarParentesis(array)
+
+            return ''
+        }
+
+
+    const a = decode('hola (odnum)')
+    console.log(a) // hola mundo
+
+    const b = decode('(olleh) (dlrow)!')
+    console.log(b) // hello world!
+
+    // const c = decode('sa(u(cla)atn)s')
+    // console.log(c) // santaclaus
+    // </script>
+</body>
+</html>

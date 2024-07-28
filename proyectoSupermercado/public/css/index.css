@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav div{
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.products {
+    padding: 20px;
+}
+
+.swiper-container {
+    padding: 20px;
+}
+
+.swiper-slide {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.swiper-slide h3 {
+    margin-top: 0;
+}
+
+.swiper-slide p {
+    margin: 5px 0;
+}
+
+.swiper-slide button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.swiper-slide button:hover {
+    background-color: #45a049;
+}
+
+

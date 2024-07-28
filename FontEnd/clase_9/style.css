@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    
+}
+body{
+    background-color: gray;
+}
+
+div{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    height: 15em;
+    width: 30em;
+    text-align: center;
+}
+
+a:hover{
+    color: red;
+}
+a:visited{
+    color: peru;
+}
+a:active{
+    background-color: green;
+}
+a:link{
+    color: violet;
+
+}

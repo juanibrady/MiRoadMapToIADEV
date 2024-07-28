@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+         h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 80px;
+         }
+         h2{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 100px;
+         }
+         .numero.positivo{
+            color: green;
+         }
+         .numero.negativo{
+            color: red;
+         }
+         .numero.neutro{
+            color: black;
+         }
+         button{
+            height: 40px;
+            padding: 0px 40px;
+            font-weight: 600;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 15px;
+            background-color: lightcyan;
+         }
+         button:active{
+            border-color: blue;
+         }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <h2 class="numero neutro"></h2>
+    <div class="button-container">
+        <button type="button" class="restar">Restar</button>
+        <button type="button" class="resetear">Resetear</button>
+        <button type="button" class="sumar">Sumar</button>
+    </div>
+    <script>
+        const numero=document.querySelector(".numero");
+        const sumar=document.querySelector(".sumar");
+        const restar=document.querySelector(".restar");
+        const resetear=document.querySelector(".resetear")
+        let i =0
+        const eliminarclases=(elemento,c1,c2,c3)=>{
+            if(elemento.classList.contains(c2)||elemento.classList.contains(c3)){
+                elemento.classList.remove(c2,c3)
+                elemento.classList.add(c1)
+            }
+        }
+
+        numero.innerText= i
+        sumar.addEventListener("click",()=>{
+            i++
+            if(i>0){
+                eliminarclases(numero,"positivo","negativo","neutro")
+            }else{if(i===0){
+                eliminarclases(numero,"neutro","positivo","negativo")
+            }}
+            numero.innerText=i
+        })
+
+        restar.addEventListener("click", ()=>{
+            i--
+            if(i<0){
+                eliminarclases(numero,"negativo","positivo","neutro")
+            }else{if(i===0){
+                eliminarclases(numero,"neutro","positivo","negativo")
+            }}
+            numero.innerText=i
+        })
+
+        resetear.addEventListener("click", ()=>{
+            i=0
+            eliminarclases(numero,"neutro","positivo","negativo")
+            numero.innerText=i
+        })
+    </script>
+</body>
+</html>

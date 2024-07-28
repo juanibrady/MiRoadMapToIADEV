@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto - Panel de Administración</title>
+    <link rel="stylesheet" href="css/editar.css">
+</head>
+<body>
+    <header>
+        <h1>Editar Producto</h1>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Volver al Panel de Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="edit-product">
+            <h2>Modificar Producto</h2>
+            <form>
+                <label for="productId">ID del Producto:</label>
+                <input type="text" id="productId" name="productId" value="1" readonly>
+
+                <label for="productName">Nombre del Producto:</label>
+                <input type="text" id="productName" name="productName" value="Leche">
+
+                <label for="productPrice">Precio:</label>
+                <input type="number" id="productPrice" name="productPrice" step="0.01" value="1.00">
+
+                <label for="productDescription">Descripción:</label>
+                <textarea id="productDescription" name="productDescription">Leche fresca de alta calidad.</textarea>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supermercado Online. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

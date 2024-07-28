@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Supermercado Online</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header>
+        <h1>Supermercado Online</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Inicio</a></li>
+                <li><a href="/products">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <% products.forEach(p => {%>
+            <div class="product-card">
+                <h2><%= p.nombre_producto %></h2>
+                <p class="price"><%= p.precio %></p>
+                <p><%= p.descripcion %></p>
+                <button>Añadir al carito</button>
+            </div>
+            <%});%>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Supermercado Online. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

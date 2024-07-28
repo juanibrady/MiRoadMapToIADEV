@@ -1,0 +1,29 @@
+header{
+    background-color: #FF3EA5;
+    text-align: center;
+}
+body{
+    margin: 0;
+}
+
+h1{
+    text-align: justify;
+    display: inline-block;
+}
+nav{
+    display: inline-block;
+    
+}
+nav ul li{
+    display: inline-block;
+}
+a{
+    border-radius: 10px;
+    background-color: rgb(138, 43, 226);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    background-color: rgb(138, 43, 200);
+}

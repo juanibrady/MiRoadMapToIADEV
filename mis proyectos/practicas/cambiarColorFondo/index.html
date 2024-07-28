@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            display: inline-block;
+            background-color: black;
+            color: white;
+            height: 60px;
+            width: auto;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+        }
+        button{
+            border-radius: 10px;
+            border: 2px solid black;
+            height: 40px;
+            width: 100px;
+        }
+
+        span, body, button{
+            transition: all 3s;
+        }
+    </style>
+</head>
+<body>
+        <h1></h1>
+        <button type="button">Apretame</button>
+    <script>
+        const h1 =document.querySelector("h1");
+        const boton = document.querySelector("button");
+        const body = document.querySelector("body");
+        const colores = [
+
+            'red',      // rojo
+            'green',      // verde
+            'blue',      // azul
+            'yellow',    // amarillo
+            'purple',    // magenta
+            'lightblue',    // cian
+            'brown',      // marrón
+            'darkgreen',      // verde oscuro
+            'darkblue',      // azul oscuro
+            'grey'   // gris
+        ];
+        const contenido ="El color es: ";
+        h1.innerHTML=contenido+" <span>white</span>";
+        const span=document.querySelector("span")
+
+        boton.addEventListener("click", (event)=>{
+            const numeroAleatorio=Math.floor(Math.random()*colores.length);
+            body.style.backgroundColor=colores[numeroAleatorio];
+            boton.style.backgroundColor=colores[numeroAleatorio];
+            span.style.color=colores[numeroAleatorio]
+            span.innerText=colores[numeroAleatorio]
+        });
+    </script>
+</body>
+</html>

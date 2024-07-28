@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+
+        //-------------------------  MI CODIGO ------------------------------
+
+        // function manufacture(gifts, materials) {
+        //     const mat= materials.split("")
+        //     const resultado=[]
+        //     gifts.forEach((e)=>{
+        //         let contador=0
+        //         const letras=e.split("")
+        //         letras.forEach((letra) => {
+        //             mat.forEach((l) => {
+        //                 if(letra==l){
+        //                     contador++
+        //                 }
+        //             });
+        //         });
+        //     if(contador==e.length){
+        //         resultado.push(e)
+        //     }
+        //     })
+        //     console.log(resultado)
+        // }
+
+        //-------------------------------------------------------------------------------
+
+        function manufacture(gifts, materials) {
+            const canManufacture = (gift, materialCounts) => {
+                const giftCounts = {};
+                
+                // Contamos las frecuencias de los caracteres en el regalo
+                for (const char of gift) {
+                if (!giftCounts[char]) {
+                    giftCounts[char] = 0;
+                }
+                giftCounts[char]++;
+                }
+                
+                // Verificamos si hay suficientes materiales para cada carácter del regalo
+                for (const char in giftCounts) {
+                if (!materialCounts[char]) {
+                    return false;
+                }
+                }
+                
+                return true;
+            };
+
+            const materialCounts = {};
+            
+            // Contamos las frecuencias de los caracteres en los materiales disponibles
+            for (const char of materials) {
+                if (!materialCounts[char]) {
+                materialCounts[char] = 0;
+                }
+                materialCounts[char]++;
+            }
+            // console.log(materialCounts)
+
+            // Filtramos los regalos que se pueden fabricar
+            const manufacturableGifts = gifts.filter(gift => canManufacture(gift, materialCounts));
+            
+            return manufacturableGifts;
+}
+
+        const gifts = ['tren', 'oso', 'pelota']
+        const materials = 'tronesa'
+
+        manufacture(gifts, materials)  // ["tren", "oso"]
+        // 'tren' SÍ porque sus letras están en 'tronesa'
+        // 'oso' SÍ porque sus letras están en 'tronesa'
+        // 'pelota' NO porque sus letras NO están en 'tronesa'
+
+        const gifts2 = ['juego', 'puzzle']
+        const materials2 = 'jlepuz'
+
+        manufacture(gifts2, materials2) // ["puzzle"]
+
+        const gifts3 = ['libro', 'ps5']
+        const materials3 = 'psli'
+
+        manufacture(gifts3, materials3) 
+    </script>
+</body>
+</html>

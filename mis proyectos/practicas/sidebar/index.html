@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>sidebar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #c4c4c4;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;            
+        }
+        nav{
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            transition: transform 2s;
+            transform: translateX(-400px);
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+            align-self: flex-start;
+        }
+        h1,button{
+            margin: 20px 20px;
+        }
+        h1{
+            font-size: 35px;
+            text-shadow: 4px 4px 5px lightgrey;
+        }
+        .activo{
+            transform: translateX(0);
+        }
+        .button-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .fa-solid.fa-xmark{
+            margin-top: 10px;
+            font-size:25px;
+            color: red;
+        }
+        .fa-solid.fa-bars{
+            background-color: #c4c4c4;
+            color: #6EB5FF;
+            font-size: 40px;
+
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            margin-bottom: 120px;
+        }
+        li{
+            width: 100%;
+            height: 60px;
+            list-style: none;
+            text-align: start;
+            line-height: 60px;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        li:hover{
+            color: #6EB5FF;
+            background-color: #AFC8FF;
+        }
+        span{
+            color:#6EB5FF;
+        }
+        .redes>i{
+            cursor: pointer;
+            color: #6EB5FF;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="button-container">
+            <h1><span>Adicto</span> al codigo</h1>
+            <button type="button" class="cerrar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Proyectos</li>
+            <li>Contact</li>
+        </ul>
+        <div class="redes">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </nav>
+    <button type="button" class="abrir"><i class="fa-solid fa-bars"></i></button>
+    <script src="./script.js"></script>
+</body>
+</html>

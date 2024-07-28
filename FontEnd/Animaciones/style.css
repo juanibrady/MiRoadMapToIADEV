@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: relative;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.box>div{
+    position: absolute;
+    transform-style: preserve-3d;
+    height: 100px;
+    width: 100px;
+}
+ .box:hover{
+    transform-origin: center center;
+    transform: rotateX(360deg);
+ }
+.front{
+    background-color: blue;
+ }
+.behind{
+    background-color: red;
+    transform: translateZ(-100px);
+}
+
+.top{
+    background-color: orange;
+    transform: rotateX(90deg) translateZ(50px) translateY(-50px);
+
+}
+.bottom{
+    background-color: green;
+    transform: rotateX(90deg) translateY(-50px) translateZ(-50px);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function findNaughtyStep(original, modified) {
+        const pasarObjeto=(char)=>{
+            const obj={}
+            for(let letra of char){
+            if(!obj[letra]){
+                obj[letra]=0
+            }
+            obj[letra]++
+            }
+            return obj
+        }
+        const objetoOriginal=pasarObjeto(original)
+        const objetoModificado=pasarObjeto(modified)
+        
+
+
+        for(let letra in objetoModificado){
+            if(!objetoOriginal[letra] || objetoModificado[letra]>objetoOriginal[letra]){
+                return letra
+            }
+        }
+        for(let letra in objetoOriginal){
+            if(!objetoModificado[letra] || objetoModificado[letra]<objetoOriginal[letra]){
+                return letra
+            }
+        }
+
+        return ''
+    }
+    
+    let letra=""
+    const original = 'abcd'
+    const modified = 'abcde'
+    letra= findNaughtyStep(original, modified) // 'e'
+    console.log(letra);
+    const original2 = 'stepfor'
+    const modified2 = 'stepor'
+    letra =findNaughtyStep(original2, modified2) // 'f'
+    console.log(letra);
+    const original3 = 'abcde'
+    const modified3 = 'abcde'
+    letra =findNaughtyStep(original3, modified3) // ''
+    console.log(letra);
+    </script>
+</body>
+</html>

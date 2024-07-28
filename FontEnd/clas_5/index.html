@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a la tecnologia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulario de inscripcion a la conferencia</h1>
+    <form>
+        <fieldset>
+            <!-- <legend></legend> -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" name="nombre" class="inp">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido" name="apellido" class="inp"> <br><br>
+            <label for="nac">Ingrese su fecha de nacimiento</label>
+            <input type="date" name="fecha de nacimiento" id="nac" class="inp"> <br><br>
+            <label for="años">Años dedicados a la profesion:</label>
+            <input type="number" name="dedicados" id="años" placeholder="Ingrese los años dedicados" class="inp"><br><br>
+            <label for="contraseña">Contraseña</label>
+            <input type="password"  class="inp"name="contraseña" id="contraseña" placeholder="Ingrese su contraseña" ><br><br>
+            <label for="email">email</label>
+            <input class="inp" type="email" name="email" id="email" placeholder="Ingrese su email"><br><br>
+            <label for="img">Ingrese su foto de perfil:</label>
+            <input class="inp" type="file" name="img" id="img">
+            <p>Tus intereses:</p>
+            <input type="checkbox" name="intereses" value="1">Desarrollo web
+            <input type="checkbox" name="intereses" value="2">Desarrollo Movil
+            <input type="checkbox" name="intereses" value="3">Ciencia de datos
+            <p>Cuatrimestre de inicio:</p>
+            <input class="inp" type="radio" name="Cuatrimestre" value="1">Primer Cuatrimestre
+            <input class="inp" type="radio" name="Cuatrimestre" value="2">Segundo Cuatrimestre <br><br>
+            <label for="prov">Provincia a la que perteneces:</label>
+            <select class="inp" name="Provincias" id="prov">
+                <option value="1">Buenos aires</option>
+                <option value="2">Chubut</option>
+            </select><br><br>
+            <label  for="nivel">Ingrese su nivel(0 al 10)</label>
+            <input class="inp" type="range" name="nivel" id="nivel" min="0" max="10" step="1"><br><br>
+            <label for="comm">Ingrese algun comentario sobre usted</label><br>
+            <textarea class="inp" name="comentarios" id="comm" cols="30" rows="10" placeholder="Ingrese un comentario:"></textarea><br>
+            <input class="inp" type="submit" value="enviar">
+        </fieldset>
+    </form>
+</body>
+</html>

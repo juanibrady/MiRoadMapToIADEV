@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    background-color: blue;
+    border: 10px solid red;
+    height: 200px;
+    width: 200px;
+
+
+}
+
+div div{
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    border: none;
+}
+
+#box1{
+    background-color: pink;
+    position: relative;
+    z-index: 100;
+}
+#box2{
+    position: relative;
+    background-color: aqua;
+    z-index: 50;
+}
+#box3{
+    position: relative;
+}
+
+p{
+    position: absolute;
+    display: inline-block;
+    background-color: blue;
+}
